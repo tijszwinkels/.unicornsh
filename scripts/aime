@@ -1,0 +1,15 @@
+# Generate the log file name using the date command
+log_file="$HOME/.unicornsh/logs/$(date -u +"%Y-%m-%dT%H:%M:%SZ").log"
+
+# Start an AI Session
+# This can get expensive quick, let's leave it off for now.
+# For later; autostart a new session every 15m? Then how to keep it longer?
+# export AISESSION=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+
+# Determine the current shell and run it in script
+# script will write all output to log_file
+current_shell=$(basename "$SHELL")
+mkdir -p "$HOME/.unicornsh/logs"
+script -t 1 "$log_file" "$current_shell" -l
+
+
