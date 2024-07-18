@@ -2,6 +2,12 @@
 
 Welcome to .unicornsh!
 
+![Simple example](docs/simple.gif)
+
+Activate with `aime`. Just use `ai` to ask a question, and `ais` to generate (and after confirmation execute) a shell command.
+
+---
+
 This project is a proof of concept for having an LLM assistant in the shell, that has context on what you were working on before it was called.
 Uses [shell_gpt](https://github.com/TheR1D/shell_gpt), but adds scripting so the assistant knows the last command that was executed, and the output it received.
 
