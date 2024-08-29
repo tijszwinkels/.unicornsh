@@ -13,7 +13,9 @@ export PATH=$PATH:~/.unicornsh/scripts:~/.unicornsh/bin
 ### Model variables
 
 alias ai='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
+alias ail='~/.unicornsh/scripts/aicontext.sh 500 | sgpt --no-functions $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
 alias ais='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions --shell $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
+alias aisl='~/.unicornsh/scripts/aicontext.sh 500 | sgpt --no-functions --shell $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
 alias air='~/.unicornsh/scripts/aicontext.sh | sgpt --no-functions --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
 alias aif='~/.unicornsh/scripts/aicontext.sh | sgpt $(if [[ -n $AISESSION ]]; then echo "--chat $AISESSION"; fi)'
 alias airf='~/.unicornsh/scripts/aicontext.sh | sgpt --repl $(if [[ -n $AISESSION ]]; then echo "$AISESSION"; else echo "temp"; fi)'
